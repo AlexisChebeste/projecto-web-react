@@ -1,3 +1,5 @@
+import styles from "./Button.module.css";
+
 interface IButton{
     content: string;
     href: string;
@@ -5,7 +7,7 @@ interface IButton{
 
 export function Button({content, href}: IButton){
     return(
-        <a className="btn-primary" href={href}>
+        <a className={styles.btn} href={href}>
             {content}
         </a>
     )

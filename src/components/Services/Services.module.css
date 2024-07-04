@@ -1,0 +1,24 @@
+/*Services Styles*/
+.service{
+    background-color: var(--light-gray);
+    padding: 50px 0;
+    & h2{
+        margin-bottom: 70px;
+        max-width: 655px;
+        margin: 0 auto 70px;
+        text-align: center;
+    }
+  }
+  
+  .serviceList{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 50px;
+  }
+  
+@media (min-width: 1024px) {
+
+    .serviceList{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

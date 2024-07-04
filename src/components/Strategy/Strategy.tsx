@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { Button } from "./Button";
+import { Button } from "../Button/Button";
 import { StrategyCard } from "./StrategyCard";
-import { IStrategyCard } from "../types/strategyCard";
+import { IStrategyCard } from "../../types/strategyCard";
+import styles from "./Strategy.module.css"
 
 export function Strategy (){
 
@@ -14,8 +15,8 @@ export function Strategy (){
     }, []);
 
     return (
-        <section className="strategy">
-            <div className="container strategy-container">
+        <section className={styles.strategy}>
+            <div className={`container ${styles.strategyContainer}`}>
                 <div className="left">
                     <h2>Here are 3 working steps to organize our projects.</h2>
                     <p>
@@ -32,7 +33,7 @@ export function Strategy (){
                     <Button content="Learn more" href="/strategy"/>
                 </div>
                 <div className="right">
-                    <div className="strategy-cards-container">
+                    <div className={styles.strategyCardsContainer}>
                         {strategyCards.map((card: IStrategyCard) => ( 
                             <StrategyCard key={card.id} {...card}/>
                         ))}

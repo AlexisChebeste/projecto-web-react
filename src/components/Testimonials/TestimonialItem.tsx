@@ -1,12 +1,13 @@
-import { ITestimonialsItem } from "../types/testimonialsItem";
+import { ITestimonialsItem } from "../../types/testimonialsItem";
+import styles from "./Testimonial.module.css"
 
 export function TestimonialItem({testimonials, image, author, area}: ITestimonialsItem) {
     return (
-        <div className="testimonials-item">
+        <div className={styles.testimonialsItem}>
         <p>
             {testimonials}
         </p>
-        <div className="testimonials-author">
+        <div className={styles.testimonialsAuthor}>
             <div className="image">
                 <img src={image} />
             </div>

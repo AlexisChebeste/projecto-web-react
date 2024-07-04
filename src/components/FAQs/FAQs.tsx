@@ -1,7 +1,8 @@
-import { IFaqItem } from "../types/faqItem";
-import { Button } from "./Button";
+import { IFaqItem } from "../../types/faqItem";
+import { Button } from "../Button/Button";
 import { useState, useEffect } from "react";
 import { FAQItem } from "./FAQItem";
+import styles from "./FAQs.module.css";
 
 export function FAQs(){
 
@@ -14,8 +15,8 @@ export function FAQs(){
     }, []);
 
     return (
-        <section className="faq">
-            <div className="container faqs-container">
+        <section className={styles.faq}>
+            <div className={`container ${styles.faqsContainer}`}>
                 <div className="left">
                     <h2>
                     If you don't see an answer to your question, you can send us an email
@@ -28,7 +29,7 @@ export function FAQs(){
                     <Button content="All FAQ" href="/faqs"/>
                 </div>
                 <div className="right">
-                    <div className="faqs-list">
+                    <div className={styles.faqsList}>
                         {faqs.map((item: IFaqItem) =>
                             <FAQItem 
                                 key={item.id}

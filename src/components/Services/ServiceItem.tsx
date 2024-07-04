@@ -1,8 +1,9 @@
-import { IServiceItem } from "../types/servicesItem";
+import { IServiceItem } from "../../types/servicesItem";
+import styles from "./Service.module.css"
 
 export function ServiceItem({image, title, description}: IServiceItem) {
     return (
-        <div className="service-item">
+        <div className={styles.serviceItem}>
             <img src={image}/>
             <h3>{title}</h3>
             <p>{description}</p>

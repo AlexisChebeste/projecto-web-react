@@ -1,0 +1,36 @@
+.strategyCard{
+    align-items: center;
+    background-color: var(--white);
+    box-shadow: 1px .1rem .5rem 0px rgb(60 60 60 / 12%);
+    display: flex;
+    gap: 20px;
+    max-width: 520px;
+    padding: 20px;
+    position: relative;
+  
+    & .order{
+        background-color: var(--skyblue); 
+        border-radius: 100%;
+        color: var(--primary-color);
+        font-size: 22px;
+        font-weight: 600;
+        padding: 10px 12px;
+        width: fit-content;
+        
+    }
+}
+  
+
+
+
+@media (min-width: 1280px) {
+    .strategy-card{
+        &:nth-child(2){
+            left: 50px;
+        }
+  
+        &:nth-child(3){
+            left: 20px;
+        }
+    }
+  }

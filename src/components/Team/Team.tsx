@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import checkLogo from '../assets/images/Icons/check.svg'
-import userIcon from '../assets/images/Icons/user.svg'
-import trophyIcon from '../assets/images/Icons/trophy.svg'
+import checkLogo from '../../assets/images/Icons/check.svg'
+import userIcon from '../../assets/images/Icons/user.svg'
+import trophyIcon from '../../assets/images/Icons/trophy.svg'
 
-import { ITeammate } from "../types/teammate";
+import { ITeammate } from "../../types/teammate";
 import { Teammate } from "./Teammate";
+import styles from "./Team.module.css"
 
 export function Team() {
     
@@ -17,8 +18,8 @@ export function Team() {
     }, []);
 
     return (
-        <section className="team">
-        <div className="container team-container">
+        <section className={styles.team}>
+        <div className={`container ${styles.teamContainer}`}>
             <div className="info">
             <h2>We are proud of our design team</h2>
             <p>
@@ -26,22 +27,22 @@ export function Team() {
                 for you.
             </p>
             </div>
-            <div className="team-statistics">
-            <div className="team-statistics-item">
+            <div className={styles.teamStatistics}>
+            <div className={styles.teamStatisticsItem}>
                 <div className="image">
                 <img src={checkLogo} alt="" />
                 </div>
                 <h3>1000+</h3>
                 <p>Completed Projects</p>
             </div>
-            <div className="team-statistics-item">
+            <div className={styles.teamStatisticsItem}>
                 <div className="image">
                 <img src={userIcon} alt="" />
                 </div>
                 <h3>50K+</h3>
                 <p>Happy Customers</p>
             </div>
-            <div className="team-statistics-item">
+            <div className={styles.teamStatisticsItem}>
                 <div className="image">
                 <img src={trophyIcon} alt="" />
                 </div>
@@ -49,7 +50,7 @@ export function Team() {
                 <p>Awards Won</p>
             </div>
             </div>
-            <div className="team-list">
+            <div className={styles.teamList}>
                 {teammates.map((item: ITeammate) => 
                 <Teammate 
                     key={item.id}
