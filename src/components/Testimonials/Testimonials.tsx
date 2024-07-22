@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { ITestimonialsItem } from "../../types/testimonialsItem";
 import { TestimonialItem } from "./TestimonialItem";
-import styles from "./Testimonials.module.css"
 
 export function Testimonials(){
 
@@ -14,12 +13,12 @@ export function Testimonials(){
     }, []);
 
     return(
-        <section className={styles.testimonials}>
+        <section className="bg-light-gray py-16 px-0">
             <div className="container">
-                <h2>
+                <h2 className="max-w-[670px] mt-0 mx-auto mb-12 text-center">
                 Don't take our word for it. See what customers are saying about us.
                 </h2>
-                <div className={styles.testimonialsList}>
+                <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
                     {testimonials.map((item: ITestimonialsItem) =>
                         <TestimonialItem 
                             key={item.id}

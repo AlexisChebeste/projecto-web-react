@@ -1,13 +1,10 @@
 import { IFaqItem } from "../../types/faqItem";
-import styles from "./FAQ.module.css";
-import stylesItem from "./FAQs.module.css";
-
 
 export function FAQItem({question, answer}: IFaqItem) {
     return (
-        <div className={stylesItem.faqsItem}>
-            <details className={styles.details}>
-                <summary className={styles.summary}>{question}</summary>
+        <div className="shadow-md cursor-pointer">
+            <details className="bg-white rounded-md p-5">
+                <summary className="bg-white text-heading-color text-lg font-semibold leading-6 marker:text-primary-color">{question}</summary>
                 <p>{answer}</p>
             </details>
         </div>

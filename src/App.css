@@ -67,6 +67,20 @@ ul{
   }
 }
 
+.active{
+  display: flex;
+  position: absolute;
+  background-color: var(--primary-color);
+  top: 0;
+  left: 0;
+  height: 100vh;
+  
+  flex-direction: column;
+  padding: 50px 0 20px; 
+  text-align: center;
+  width: 100%;
+}
+
 .container{
   max-width: 1280px;
   margin: 0 auto;

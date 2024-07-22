@@ -1,18 +1,17 @@
 import heroImage from '../../assets/images/hero.svg'
 import { Button } from '../Button/Button'
-import styles from "./Hero.module.css"
 
 
 export function Hero(){
     return (
-        <section className={styles.hero}>
-            <div className={`container ${styles.heroContainer}`}>
+        <section className="py-14 px-0">
+            <div className='container flex flex-wrap items-center gap-[30px] md:flex-nowrap'>
                 <div className="left">
-                <h1>
+                <h1 className='mb-5 max-w-[405px] md:text-[40px]'>
                     A digital agency specializing on
                     <span>mobile design </span>
                 </h1>
-                <p>
+                <p className='text-[22px] leading-[34px] mb-[30px] md:text-[18px]'>
                     We are an award winning design agency that strongly believes in the
                     power of creative ideas.
                 </p>
